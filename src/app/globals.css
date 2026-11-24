@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbf8f6;
+  --foreground: #241821;
+
+  --brand-ink: #2b1a2f;
+  --brand-ink-soft: #432a49;
+  --brand-gold: #c9917c;
+  --brand-gold-dark: #a8735f;
+  --brand-sand: #f6ebe6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--brand-ink);
+  --color-ink-soft: var(--brand-ink-soft);
+  --color-gold: var(--brand-gold);
+  --color-gold-dark: var(--brand-gold-dark);
+  --color-sand: var(--brand-sand);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Shared form control used on the forms */
+.input {
+  width: 100%;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.9rem;
+  color: var(--foreground);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.input:focus {
+  border-color: var(--brand-gold);
+}
